@@ -111,7 +111,7 @@ export class ClockSheet extends ActorSheet {
     // update associated tokens
     const tokens = actor.getActiveTokens();
     for (const t of tokens) {
-      await t.update({
+      await t.document.update({
         name: actor.name,
         img: clock.image.img,
         actorLink: true
